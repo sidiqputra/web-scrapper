@@ -1,0 +1,5 @@
+[DEFAULT]
+MAIN_URL = https://onlineshop.com
+STORE_NAME = xxx
+SORT_BY = sales
+MAX_PAGE_NUM = 1
