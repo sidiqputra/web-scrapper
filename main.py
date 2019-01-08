@@ -63,9 +63,9 @@ for i in range(int(len(hlink))):
         prod_img_list = div_img[i].get_attribute('style')
         prod_img.append(prod_img_list[23:84])
     
+    prod_pict = ";".join(prod_img)
+    
     with open('export.csv', 'a') as f:
-        f.write(prod_name + ";" + "CATEGORY" + ";" + prod_desc + ";" + prod_price + ";" + "WEIGHT" + ";" + "MIN_ORDER" + ";" + "Tersedia" + ";" + prod_stock + ";" + "ETALASE" + ";" + "PREORDER" + ";" + "WAKTU_PROSES_PREORDER" + ";" + "CONDITION" + ";" + prod_img[0] + ";" + "PICT2" + ";" + "PICT3" + ";" + "PICT4" + ";" + "PICT5" + ";" + "VID1" + ";" + "VID2" + ";" + "VID3" + "\n")
-
-
+        f.write(prod_name + ";" + "CATEGORY" + ";" + prod_desc + ";" + prod_price + ";" + "WEIGHT" + ";" + "MIN_ORDER" + ";" + "Stock Tersedia" + ";" + prod_stock + ";" + "ETALASE" + ";" + "PREORDER" + ";" + "WAKTU_PROSES_PREORDER" + ";" + "CONDITION" + ";" + prod_pict + "\n")
 
 driver.close()
